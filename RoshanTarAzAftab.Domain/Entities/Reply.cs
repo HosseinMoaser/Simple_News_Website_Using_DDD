@@ -1,8 +1,9 @@
-﻿namespace RoshanTarAzAftab.Domain.Entities;
+﻿using RoshanTarAzAftab.Domain.Common;
 
-public class Reply
+namespace RoshanTarAzAftab.Domain.Entities;
+
+public class Reply : BaseEntity
 {
-    public Guid Id { get; set; }
     public string Content { get; set; }
     public DateTime DatePosted { get; set; }
     public Guid CommentId { get; set; }

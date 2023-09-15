@@ -1,10 +1,10 @@
-﻿using RoshanTarAzAftab.Domain.Enums;
+﻿using RoshanTarAzAftab.Domain.Common;
+using RoshanTarAzAftab.Domain.Enums;
 
 namespace RoshanTarAzAftab.Domain.Entities;
 
-public class Category
+public class Category : BaseEntity
 {
-    public Guid Id { get; set; }
-    public CategoryType CategoryType { get; set; }
+    public string Name { get; set; }
     public List<Post> Posts { get; set; }
 }

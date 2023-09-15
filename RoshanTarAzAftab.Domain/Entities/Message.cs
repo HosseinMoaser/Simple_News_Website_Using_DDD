@@ -1,8 +1,9 @@
-﻿namespace RoshanTarAzAftab.Domain.Entities;
+﻿using RoshanTarAzAftab.Domain.Common;
 
-public class Message
+namespace RoshanTarAzAftab.Domain.Entities;
+
+public class Message : BaseEntity
 {
-    public Guid Id { get; set; }
     public string SenderName { get; set; }
     public string SenderEmail { get; set; }
     public string Content { get; set; }

@@ -1,8 +1,9 @@
-﻿namespace RoshanTarAzAftab.Domain.Entities;
+﻿using RoshanTarAzAftab.Domain.Common;
 
-public class Comment
+namespace RoshanTarAzAftab.Domain.Entities;
+
+public class Comment : BaseEntity
 {
-    public Guid Id { get; set; }
     public string Content { get; set; }
     public DateTime DatePosted { get; set; }
     public Guid PostId { get; set; }
