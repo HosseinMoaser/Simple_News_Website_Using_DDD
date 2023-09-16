@@ -1,6 +1,13 @@
-﻿namespace RoshanTarAzAftab.Domain.Common;
+﻿using RoshanTarAzAftab.Domain.ValueObjects;
+
+namespace RoshanTarAzAftab.Domain.Common;
 
 public abstract class BaseEntity
 {
-    public Guid Id { get; set; }
+    public BaseEntityId Id { get; private set; }
+
+	public BaseEntity(BaseEntityId id)
+	{
+		Id = id;
+	}
 }

@@ -1,9 +1,9 @@
 ﻿namespace RoshanTarAzAftab.Domain.ValueObjects;
 
-public record PostDate
+public record Date
 {
     public DateTime Value { get; }
-    public PostDate(DateTime value)
+    public Date(DateTime value)
     {
         if (value == DateTime.MinValue)
         {
@@ -13,7 +13,7 @@ public record PostDate
         Value = value;
     }
 
-    public static implicit operator DateTime(PostDate date) => date.Value;
-    public static implicit operator PostDate(DateTime date) => new(date);
+    public static implicit operator DateTime(Date date) => date.Value;
+    public static implicit operator Date(DateTime date) => new(date);
 
 }

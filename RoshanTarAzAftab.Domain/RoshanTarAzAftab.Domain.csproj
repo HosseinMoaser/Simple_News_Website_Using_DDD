@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ValueObjects\Message\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\RoshanTarAzAftab.Shared.Abstractions\RoshanTarAzAftab.Shared.Abstractions.csproj" />
   </ItemGroup>
 
