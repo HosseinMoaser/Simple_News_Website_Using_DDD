@@ -13,7 +13,6 @@ public class Post : AggregateRoot<BaseEntityId>
     private PostShortDescription _shortDescription;
     private PostContent _content;
     private Date _datePosted;
-    public List<Comment> Comments { get; set; }
 
 
     internal Post(BaseEntityId id, PostTitle title, PostType postType, BaseEntityId categoryId, PostShortDescription shortDescription,
