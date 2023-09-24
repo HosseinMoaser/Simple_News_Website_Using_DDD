@@ -9,6 +9,6 @@ public sealed class PostFactory : IPostFactory
     public Post Create(BaseEntityId id, PostTitle title, PostType postType, BaseEntityId categoryId, PostShortDescription shortDescription,
         PostContent content, Date datePosted)
     {
-        return new Post(id,title,postType,categoryId,shortDescription,content,datePosted);
+        return new Post(id, title, postType, categoryId, shortDescription, content, datePosted);
     }
 }

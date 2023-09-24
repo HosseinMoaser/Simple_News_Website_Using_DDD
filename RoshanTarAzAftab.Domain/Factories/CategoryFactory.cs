@@ -8,6 +8,6 @@ public class CategoryFactory : ICategoryFactory
 {
     public Category Create(BaseEntityId id, CategoryName name)
     {
-        return new Category(id,name);
+        return new Category(id, name);
     }
 }

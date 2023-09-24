@@ -8,6 +8,6 @@ public class MessageFactory : IMessageFactory
 {
     public Message Create(BaseEntityId id, FullName senderName, Email senderEmail, MessageContent content)
     {
-        return new Message(id,senderName,senderEmail,content);
+        return new Message(id, senderName, senderEmail, content);
     }
 }

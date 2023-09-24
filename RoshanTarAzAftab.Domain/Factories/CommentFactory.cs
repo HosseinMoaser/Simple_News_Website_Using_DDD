@@ -9,6 +9,6 @@ public class CommentFactory : ICommentFactory
 {
     public Comment Create(BaseEntityId id, CommentContent content, Date date, BaseEntityId postId, Email email, FullName fullName)
     {
-        return new Comment(id,content,date,postId,email,fullName);
+        return new Comment(id, content, date, postId, email, fullName);
     }
 }

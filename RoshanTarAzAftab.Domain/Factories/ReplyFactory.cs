@@ -9,6 +9,6 @@ public class ReplyFactory : IReplyFactory
 {
     public Reply Create(BaseEntityId id, CommentContent content, Date datePosted, BaseEntityId commentId, Email email, FullName fullName)
     {
-        return new Reply(id,content,datePosted,commentId, email,fullName);
+        return new Reply(id, content, datePosted, commentId, email, fullName);
     }
 }
