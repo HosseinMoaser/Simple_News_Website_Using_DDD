@@ -1,9 +1,9 @@
 ﻿using RoshanTarAzAftab.Application.DTOs;
-using RoshanTarAzAftab.Application.Queries.Category;
+using RoshanTarAzAftab.Application.Queries.User;
 using RoshanTarAzAftab.Domain.Repositories;
 using RoshanTarAzAftab.Shared.Abstractions.Queries;
 
-namespace RoshanTarAzAftab.Application.Queries.User.Handlers;
+namespace RoshanTarAzAftab.Infrastructure.EF.Queries.Handlers.User;
 
 public class GetUsersHandler : IQueryHandler<GetUsers, IEnumerable<UserDto>>
 {

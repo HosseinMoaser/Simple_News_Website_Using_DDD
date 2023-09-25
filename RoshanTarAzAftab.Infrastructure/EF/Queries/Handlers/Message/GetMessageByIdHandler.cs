@@ -1,9 +1,10 @@
 ﻿using RoshanTarAzAftab.Application.DTOs;
 using RoshanTarAzAftab.Application.Queries.Category;
+using RoshanTarAzAftab.Application.Queries.Message;
 using RoshanTarAzAftab.Domain.Repositories;
 using RoshanTarAzAftab.Shared.Abstractions.Queries;
 
-namespace RoshanTarAzAftab.Application.Queries.Message.Handlers;
+namespace RoshanTarAzAftab.Infrastructure.EF.Queries.Handlers.Message;
 
 public class GetMessageByIdHandler : IQueryHandler<GetMessageById, MessageDto>
 {

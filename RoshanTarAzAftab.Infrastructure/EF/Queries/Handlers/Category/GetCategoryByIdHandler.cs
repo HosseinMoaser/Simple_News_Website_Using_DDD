@@ -1,8 +1,9 @@
 ﻿using RoshanTarAzAftab.Application.DTOs;
+using RoshanTarAzAftab.Application.Queries.Category;
 using RoshanTarAzAftab.Domain.Repositories;
 using RoshanTarAzAftab.Shared.Abstractions.Queries;
 
-namespace RoshanTarAzAftab.Application.Queries.Category.Handlers;
+namespace RoshanTarAzAftab.Infrastructure.EF.Queries.Handlers.Category;
 
 public class GetCategoryByIdHandler : IQueryHandler<GetCategoryById, CategoryDto>
 {

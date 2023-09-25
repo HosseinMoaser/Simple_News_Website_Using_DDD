@@ -1,9 +1,10 @@
 ﻿using RoshanTarAzAftab.Application.DTOs;
 using RoshanTarAzAftab.Application.Queries.Category;
+using RoshanTarAzAftab.Application.Queries.Post;
 using RoshanTarAzAftab.Domain.Repositories;
 using RoshanTarAzAftab.Shared.Abstractions.Queries;
 
-namespace RoshanTarAzAftab.Application.Queries.Post.Handlers;
+namespace RoshanTarAzAftab.Infrastructure.EF.Queries.Handlers.Post;
 
 public class GetPostsHandler : IQueryHandler<GetPosts, IEnumerable<PostDto>>
 {
