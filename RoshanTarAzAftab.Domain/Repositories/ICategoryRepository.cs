@@ -1,5 +1,6 @@
 ﻿using RoshanTarAzAftab.Domain.Entities;
 using RoshanTarAzAftab.Domain.ValueObjects;
+using RoshanTarAzAftab.Domain.ValueObjects.Category;
 
 namespace RoshanTarAzAftab.Domain.Repositories;
 

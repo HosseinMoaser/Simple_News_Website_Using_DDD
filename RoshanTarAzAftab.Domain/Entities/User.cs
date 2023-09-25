@@ -9,10 +9,12 @@ public class User : BaseEntity
     private FullName _fullName;
     private Email _email;
     private ActivationCode _activationCode;
-    internal User(BaseEntityId id, Email email, ActivationCode activationCode) : base(id)
+    private bool _isRegistered;
+    internal User(BaseEntityId id, Email email, ActivationCode activationCode, bool isRegistered) : base(id)
     {
         _email = email;
         _activationCode = activationCode;
+        _isRegistered = isRegistered;
     }
 
     public User(BaseEntityId id): base(id)

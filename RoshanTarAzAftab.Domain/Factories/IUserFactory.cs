@@ -6,5 +6,5 @@ namespace RoshanTarAzAftab.Domain.Factories;
 
 public interface IUserFactory
 {
-    User Create(BaseEntityId id, Email email, ActivationCode activationCode);
+    User Create(BaseEntityId id, Email email, ActivationCode activationCode, bool isRegistered);
 }

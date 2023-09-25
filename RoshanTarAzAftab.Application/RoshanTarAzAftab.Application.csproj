@@ -7,11 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Category\" />
-    <Folder Include="Commands\Comment\" />
-    <Folder Include="Commands\Message\" />
-    <Folder Include="Commands\Post\" />
-    <Folder Include="Exceptions\" />
     <Folder Include="DTOs\" />
     <Folder Include="Queries\" />
   </ItemGroup>
