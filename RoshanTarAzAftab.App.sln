@@ -10,6 +10,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoshanTarAzAftab.Shared.Abs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoshanTarAzAftab.Application", "RoshanTarAzAftab.Application\RoshanTarAzAftab.Application.csproj", "{478DF70C-BE8B-4CFC-810F-C9B27541E7E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoshanTarAzAftab.API", "RoshanTarAzAftab.API\RoshanTarAzAftab.API.csproj", "{C623AB7D-F75D-41FA-8912-1AD88D29FD72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,10 @@ Global
 		{478DF70C-BE8B-4CFC-810F-C9B27541E7E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{478DF70C-BE8B-4CFC-810F-C9B27541E7E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{478DF70C-BE8B-4CFC-810F-C9B27541E7E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C623AB7D-F75D-41FA-8912-1AD88D29FD72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C623AB7D-F75D-41FA-8912-1AD88D29FD72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C623AB7D-F75D-41FA-8912-1AD88D29FD72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C623AB7D-F75D-41FA-8912-1AD88D29FD72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
