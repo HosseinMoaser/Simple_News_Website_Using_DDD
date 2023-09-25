@@ -6,6 +6,7 @@ namespace RoshanTarAzAftab.Domain.Repositories;
 
 public interface ICategoryRepository
 {
+    Task<IEnumerable<Category>> GetCategories();
     Task<Category> GetCategoryAsync(BaseEntityId id);
     Task AddAsync(Category category);
     Task UpdateAsync(Category category);

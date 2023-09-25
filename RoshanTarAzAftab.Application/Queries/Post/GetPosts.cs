@@ -5,5 +5,4 @@ namespace RoshanTarAzAftab.Application.Queries.Post;
 
 public class GetPosts : IQuery<IEnumerable<PostDto>>
 {
-    public List<PostDto> Posts { get; set; }
 }

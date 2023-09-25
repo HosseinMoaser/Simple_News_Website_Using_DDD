@@ -5,6 +5,7 @@ namespace RoshanTarAzAftab.Domain.Repositories;
 
 public interface IPostRepository
 {
+    Task<IEnumerable<Post>> GetPosts();
     Task<Post> GetPostAsync(BaseEntityId id);
     Task AddAsync(Post post);
     Task UpdateAsync(Post post);

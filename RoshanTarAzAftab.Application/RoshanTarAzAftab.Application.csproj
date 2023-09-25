@@ -10,4 +10,11 @@
     <ProjectReference Include="..\RoshanTarAzAftab.Domain\RoshanTarAzAftab.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Queries\Category\Handlers\" />
+    <Folder Include="Queries\Message\Handlers\" />
+    <Folder Include="Queries\Post\Handlers\" />
+    <Folder Include="Queries\User\Handlers\" />
+  </ItemGroup>
+
 </Project>

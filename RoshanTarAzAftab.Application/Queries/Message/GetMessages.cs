@@ -5,5 +5,4 @@ namespace RoshanTarAzAftab.Application.Queries.Message;
 
 public class GetMessages : IQuery<IEnumerable<MessageDto>>
 {
-    public List<MessageDto> Messages { get; set; }
 }

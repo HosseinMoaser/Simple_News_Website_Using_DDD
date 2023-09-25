@@ -6,5 +6,4 @@ namespace RoshanTarAzAftab.Application.Queries.User;
 
 public class GetUsers : IQuery<IEnumerable<UserDto>>
 {
-    public List<UserDto> Users { get; set; }
 }
