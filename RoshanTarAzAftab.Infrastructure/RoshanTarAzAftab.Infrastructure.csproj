@@ -7,13 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RoshanTarAzAftab.Application\RoshanTarAzAftab.Application.csproj" />
-    <ProjectReference Include="..\RoshanTarAzAftab.Domain\RoshanTarAzAftab.Domain.csproj" />
-    <ProjectReference Include="..\RoshanTarAzAftab.Shared\RoshanTarAzAftab.Shared.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.11" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="EF\Models\" />
+    <ProjectReference Include="..\RoshanTarAzAftab.Application\RoshanTarAzAftab.Application.csproj" />
+    <ProjectReference Include="..\RoshanTarAzAftab.Domain\RoshanTarAzAftab.Domain.csproj" />
+    <ProjectReference Include="..\RoshanTarAzAftab.Shared\RoshanTarAzAftab.Shared.csproj" />
   </ItemGroup>
 
 </Project>

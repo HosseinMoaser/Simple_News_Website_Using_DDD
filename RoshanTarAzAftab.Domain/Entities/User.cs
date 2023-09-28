@@ -10,6 +10,7 @@ public class User : BaseEntity
     private Email _email;
     private ActivationCode _activationCode;
     private bool _isRegistered;
+
     internal User(BaseEntityId id, Email email, ActivationCode activationCode, bool isRegistered) : base(id)
     {
         _email = email;
