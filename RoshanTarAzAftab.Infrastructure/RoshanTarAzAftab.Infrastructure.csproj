@@ -25,4 +25,8 @@
     <ProjectReference Include="..\RoshanTarAzAftab.Shared\RoshanTarAzAftab.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="EF\Services\" />
+  </ItemGroup>
+
 </Project>

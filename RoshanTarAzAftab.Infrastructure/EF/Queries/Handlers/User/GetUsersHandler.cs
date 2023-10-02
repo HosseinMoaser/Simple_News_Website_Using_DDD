@@ -1,23 +1,24 @@
-﻿using RoshanTarAzAftab.Application.DTOs;
+﻿using Microsoft.EntityFrameworkCore;
+using RoshanTarAzAftab.Application.DTOs;
 using RoshanTarAzAftab.Application.Queries.User;
 using RoshanTarAzAftab.Domain.Repositories;
+using RoshanTarAzAftab.Infrastructure.EF.Context;
+using RoshanTarAzAftab.Infrastructure.EF.Models;
 using RoshanTarAzAftab.Shared.Abstractions.Queries;
 
 namespace RoshanTarAzAftab.Infrastructure.EF.Queries.Handlers.User;
 
-public class GetUsersHandler : IQueryHandler<GetUsers, IEnumerable<UserDto>>
+internal class GetUsersHandler : IQueryHandler<GetUsers, IEnumerable<UserDto>>
 {
-    private readonly IUserRepository _repository;
+    private readonly DbSet<UserReadModel> _users;
 
-    public GetUsersHandler(IUserRepository repository)
+    public GetUsersHandler(ReadDbContext readContext)
     {
-        _repository = repository;
+        _users = readContext.User;
     }
 
     public async Task<IEnumerable<UserDto>> HandleAsync(GetUsers query)
     {
-        var users = await _repository.GetUsers();
-        //should be converted to null
-        return null;
+        return await _users.Select(u=> u.ToUserDto()).ToListAsync();
     }
 }

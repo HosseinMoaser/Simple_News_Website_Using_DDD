@@ -1,24 +1,25 @@
-﻿using RoshanTarAzAftab.Application.DTOs;
+﻿using Microsoft.EntityFrameworkCore;
+using RoshanTarAzAftab.Application.DTOs;
 using RoshanTarAzAftab.Application.Queries.Category;
 using RoshanTarAzAftab.Application.Queries.Post;
 using RoshanTarAzAftab.Domain.Repositories;
+using RoshanTarAzAftab.Infrastructure.EF.Context;
+using RoshanTarAzAftab.Infrastructure.EF.Models;
 using RoshanTarAzAftab.Shared.Abstractions.Queries;
 
 namespace RoshanTarAzAftab.Infrastructure.EF.Queries.Handlers.Post;
 
-public class GetPostsHandler : IQueryHandler<GetPosts, IEnumerable<PostDto>>
+internal class GetPostsHandler : IQueryHandler<GetPosts, IEnumerable<PostDto>>
 {
-    private readonly IPostRepository _repository;
+    private readonly DbSet<PostReadModel> _posts;
 
-    public GetPostsHandler(IPostRepository repository)
+    public GetPostsHandler(ReadDbContext readContext)
     {
-        _repository = repository;
+        _posts = readContext.Post;
     }
 
     public async Task<IEnumerable<PostDto>> HandleAsync(GetPosts query)
     {
-        var posts = await _repository.GetPosts();
-        // should be converted to dto
-        return null;
+        return await _posts.Select(p=> p.ToPostDto()).ToListAsync();
     }
 }

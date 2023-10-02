@@ -1,23 +1,24 @@
-﻿using RoshanTarAzAftab.Application.DTOs;
+﻿using Microsoft.EntityFrameworkCore;
+using RoshanTarAzAftab.Application.DTOs;
 using RoshanTarAzAftab.Application.Queries.Message;
-using RoshanTarAzAftab.Domain.Repositories;
+using RoshanTarAzAftab.Infrastructure.EF.Context;
+using RoshanTarAzAftab.Infrastructure.EF.Models;
 using RoshanTarAzAftab.Shared.Abstractions.Queries;
 
 namespace RoshanTarAzAftab.Infrastructure.EF.Queries.Handlers.Message;
 
-public class GetMessagesHandler : IQueryHandler<GetMessages, IEnumerable<MessageDto>>
+internal class GetMessagesHandler : IQueryHandler<GetMessages, IEnumerable<MessageDto>>
 {
-    private readonly IMessageReporitory _repository;
+    private readonly DbSet<MessageReadModel> _messages;
 
-    public GetMessagesHandler(IMessageReporitory repository)
+
+    public GetMessagesHandler(ReadDbContext readContext)
     {
-        _repository = repository;
+        _messages = readContext.Message;
     }
 
     public async Task<IEnumerable<MessageDto>> HandleAsync(GetMessages query)
     {
-        var messages = await _repository.GetMessages();
-        // Should be converted to dto
-        return null;
+        return await _messages.Select(m=> m.ToMessageDto()).ToListAsync();
     }
 }

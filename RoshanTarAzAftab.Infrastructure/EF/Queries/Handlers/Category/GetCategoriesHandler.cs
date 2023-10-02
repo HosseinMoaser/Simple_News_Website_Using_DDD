@@ -1,23 +1,24 @@
-﻿using RoshanTarAzAftab.Application.DTOs;
+﻿using Microsoft.EntityFrameworkCore;
+using RoshanTarAzAftab.Application.DTOs;
 using RoshanTarAzAftab.Application.Queries.Category;
-using RoshanTarAzAftab.Domain.Repositories;
+using RoshanTarAzAftab.Domain.Entities;
+using RoshanTarAzAftab.Infrastructure.EF.Context;
+using RoshanTarAzAftab.Infrastructure.EF.Models;
 using RoshanTarAzAftab.Shared.Abstractions.Queries;
 
 namespace RoshanTarAzAftab.Infrastructure.EF.Queries.Handlers.Category;
 
-public class GetCategoriesHandler : IQueryHandler<GetCategories, IEnumerable<CategoryDto>>
+internal class GetCategoriesHandler : IQueryHandler<GetCategories, IEnumerable<CategoryDto>>
 {
-    private readonly ICategoryRepository _repository;
+    private readonly DbSet<CategoryReadModel> _categories;
 
-    public GetCategoriesHandler(ICategoryRepository repository)
+    public GetCategoriesHandler(ReadDbContext readContext)
     {
-        _repository = repository;
+        _categories = readContext.Category;
     }
 
     public async Task<IEnumerable<CategoryDto>> HandleAsync(GetCategories query)
     {
-        var categories = await _repository.GetCategories();
-        // Should be converted to dtos
-        return null;
+        return await _categories.Select(c => c.ToCategoryDto()).ToListAsync();
     }
 }
