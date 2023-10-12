@@ -19,6 +19,8 @@ internal class GetCategoriesHandler : IQueryHandler<GetCategories, IEnumerable<C
 
     public async Task<IEnumerable<CategoryDto>> HandleAsync(GetCategories query)
     {
-        return await _categories.Select(c => c.ToCategoryDto()).ToListAsync();
+        return await _categories.Include(p=> p.Posts)
+            .Select(c => c.ToCategoryDto())
+            .ToListAsync();
     }
 }

@@ -17,7 +17,8 @@ internal sealed class PostReadService : IPostReadService
     }
     public async Task<IEnumerable<PostDto>> ReadPostsAsync()
     {
-        var posts = await _posts.ToListAsync();
+        var posts = await _posts.Include(p=> p.Category)
+                                    .ToListAsync();
         
         return posts.Select(p=> p.ToPostDto());
     }

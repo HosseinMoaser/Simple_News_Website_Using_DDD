@@ -18,7 +18,8 @@ internal class GetCategoryByIdHandler : IQueryHandler<GetCategoryById, CategoryD
 
     public async Task<CategoryDto> HandleAsync(GetCategoryById query)
     {
-        var category = await _categories.Include(c => c.Posts)
+        var category = await _categories
+            .Include(c => c.Posts)
             .Where(c => c.Id == query.Id)
             .Select(c => c.ToCategoryDto())
             .AsNoTracking()

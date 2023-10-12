@@ -20,6 +20,8 @@ internal class GetPostsHandler : IQueryHandler<GetPosts, IEnumerable<PostDto>>
 
     public async Task<IEnumerable<PostDto>> HandleAsync(GetPosts query)
     {
-        return await _posts.Select(p=> p.ToPostDto()).ToListAsync();
+        return await _posts.Include(p=> p.Category)
+            .Select(p=> p.ToPostDto())
+            .ToListAsync();
     }
 }
