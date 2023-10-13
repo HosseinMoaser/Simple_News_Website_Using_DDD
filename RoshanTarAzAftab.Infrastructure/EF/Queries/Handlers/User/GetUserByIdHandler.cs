@@ -20,7 +20,7 @@ internal class GetUserByIdHandler : IQueryHandler<GetUserById, UserDto>
     public async Task<UserDto> HandleAsync(GetUserById query)
     {
         var user = await _users.Where(u => u.Id == query.Id)
-           .Select(u => u.ToPostDto())
+           .Select(u => u.ToUserDto())
            .AsNoTracking()
            .SingleOrDefaultAsync();
         return user;
