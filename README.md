@@ -9,7 +9,6 @@ Welcome to the repository of our news website implemented with Domain-Driven Des
 - Architecture
 - Getting Started
 - Contributing
-- License
 
 ## Introduction
 
