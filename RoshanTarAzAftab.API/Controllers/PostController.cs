@@ -14,4 +14,6 @@ public class PostController : BaseController
         _commandDispatcher = commandDispatcher;
         _queryDispatcher = queryDispatcher;
     }
+
+
 }
